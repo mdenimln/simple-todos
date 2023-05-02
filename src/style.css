@@ -1,0 +1,67 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.title{
+    text-align:center;
+    padding: 50px 0 20px 0;
+    background-color: lightgoldenrodyellow;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: salmon;
+    margin-bottom: 30px;
+}
+.message{
+    text-align: center;
+    font-size: large;
+}
+form{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+form input{
+    width: 30%;
+    height: 40px;
+    border: 1px solid lightskyblue;
+    border-radius: 3px;
+}
+form input::placeholder{
+    font-size: large;
+    padding: 0 10px;
+    color: lightsalmon;
+}
+input[type="text"]
+{
+    font-size:24px;
+    padding: 20px;
+    color: salmon;
+}
+form button{
+    border: none;
+    background-color: salmon;
+    border-radius: 3px;
+    color: white;
+    width: 80px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+}
+ul{
+    border: 1px solid red;
+    width: 500px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+ul li {
+    border: 1px solid;
+    list-style: none;
+    padding-bottom: 30px;
+}
+.todo-kosong{
+    text-align: center;
+    margin: 20px auto;
+}

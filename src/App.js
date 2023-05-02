@@ -1,4 +1,5 @@
 import React from 'react';
+import './style.css';
 const App = () => {
 
   const [aktivitas, setAktivitas] = React.useState('');
@@ -12,7 +13,7 @@ const App = () => {
     e.preventDefault();
 
     if (!aktivitas) {
-      return setmessage('nama aktivitas tidak boleh kosong')
+      return setmessage('Nama aktivitas tidak boleh kosong')
     }
     setmessage('')
 
@@ -82,8 +83,8 @@ const App = () => {
 
  return (
   <>
-  <h1>Simple Todos</h1>
-  {message && <div style={{color: 'red'}}>{message}</div>}
+  <h1 className='title'>Todo App</h1>
+  {message && <div className='message' style={{color: 'red'}}>{message}</div>}
   <form onSubmit={saveTodoHundler}>
     <input
     type="text"
@@ -96,6 +97,7 @@ const App = () => {
     {edit.id && <button onClick={cancelEditHundler}>batal edit</button>}
   </form>
   {todos.length > 0 ? (
+    <div className='container'>
     <ul>
       {todos.map((todo) => {
         return (
@@ -111,8 +113,9 @@ const App = () => {
         )
       })}
     </ul>
+    </div>
   ) : (
-    <p><i>Todo masih kosong</i></p>
+    <p className='todo-kosong'><i>Todo masih kosong</i></p>
   )}
   
   </>
