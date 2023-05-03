@@ -5,8 +5,8 @@
 }
 .title{
     text-align:center;
-    padding: 50px 0 20px 0;
-    background-color: lightgoldenrodyellow;
+    padding: 20px 0 20px 0;
+    background-color: lightcyan;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: salmon;
     margin-bottom: 30px;
@@ -19,6 +19,7 @@ form{
     display: flex;
     justify-content: center;
     gap: 10px;
+    margin-bottom: 20px;
 }
 form input{
     width: 30%;
@@ -49,7 +50,8 @@ form button{
     justify-content: center;
 }
 ul{
-    border: 1px solid red;
+    border: 1px solid lightskyblue;
+    border-radius: 3px;
     width: 500px;
     padding: 20px;
     display: flex;
@@ -57,11 +59,28 @@ ul{
     gap: 5px;
 }
 ul li {
-    border: 1px solid;
+    box-shadow: 0.1px 5px 3px lightgray ;
     list-style: none;
-    padding-bottom: 30px;
+    padding: 5px 5px 30px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 3px;
+}
+ul li p{
+    font-family: Arial, Helvetica, sans-serif;
 }
 .todo-kosong{
     text-align: center;
     margin: 20px auto;
+}
+.button-up-del{
+    display: flex;
+    gap: 5px;
+}
+.button-up-del button{
+    border: none;
+    background-color: blueviolet;
+    width: 50px;
+    color: white;
+    border-radius: 3px;
 }

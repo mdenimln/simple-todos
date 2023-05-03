@@ -94,7 +94,7 @@ const App = () => {
       setAktivitas(todo.target.value)
     }}/>
     <button type='submit'>{edit.id ? 'Simpan perubahan' : 'Tambah'}</button>
-    {edit.id && <button onClick={cancelEditHundler}>batal edit</button>}
+    {edit.id && <button onClick={cancelEditHundler}>Batal edit</button>}
   </form>
   {todos.length > 0 ? (
     <div className='container'>
@@ -102,13 +102,21 @@ const App = () => {
       {todos.map((todo) => {
         return (
           <li key={todo.id}>
-            <input 
-            type="checkbox" 
-            checked={todo.done}
-            onChange={doneTodoHundler.bind(this, todo)}/>
-            {todo.aktivitas}({todo.done ? (<i>selesai</i>) : (<i>belum selesai</i>)})
-            <button onClick={editTodoHundler.bind(this, todo)}>edit</button>
-            <button onClick={deleteTodoHundler.bind(this, todo.id)}>hapus</button>
+            <div>
+              <input 
+              type="checkbox" 
+              checked={todo.done}
+              onChange={doneTodoHundler.bind(this, todo)}
+              />
+              <p>{todo.aktivitas}   ({todo.done ? (<i>selesai</i>) : (<i>belum selesai</i>)})</p>
+            </div>
+            
+            <div className='button-up-del'>
+              <button onClick={editTodoHundler.bind(this, todo)}>Edit</button>
+              <button onClick={deleteTodoHundler.bind(this, todo.id)}>Hapus</button>
+            </div>
+            
+            
           </li> 
         )
       })}
